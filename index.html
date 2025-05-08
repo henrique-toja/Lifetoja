@@ -1,87 +1,169 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lifetoja - Uma iniciativa global para o aperfeiçoamento contínuo da experiência humana através de ações éticas e sustentáveis.">
+  <meta name="keywords" content="Lifetoja, desenvolvimento humano, sustentabilidade, ética, bem-estar social">
+  <meta name="author" content="Lifetoja">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Lifetoja - Apresentação Institucional">
+  <meta property="og:description" content="Uma iniciativa global para o aperfeiçoamento contínuo da experiência humana.">
+  <meta property="og:image" content="logo.jpg">
+  <meta property="og:url" content="https://lifetoja.com">
+  
   <title>Lifetoja – Apresentação Institucional</title>
+  
   <style>
     :root {
       --verde-lifetoja: #2e7d32;
       --vermelho-lifetoja: #c62828;
       --azul-lifetoja: #1565c0;
       --azul-escuro: #002b45;
+      --spacing-unit: 1rem;
+      --max-width: 960px;
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body {
-      margin: 0;
-      font-family: "Segoe UI", sans-serif;
+      font-family: "Segoe UI", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
       background-color: #f9f9f9;
       color: #333;
-      line-height: 1.6;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     header {
       text-align: center;
       background-color: #ffffff;
-      padding: 2rem 1rem 0;
+      padding: calc(var(--spacing-unit) * 2) var(--spacing-unit) 0;
       border-bottom: 4px solid var(--azul-escuro);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    header img.logo {
+    .logo {
       width: 120px;
       height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: var(--spacing-unit);
+      transition: transform var(--transition-speed) ease;
     }
 
-    header img.banner {
+    .logo:hover {
+      transform: scale(1.05);
+    }
+
+    .banner {
       width: 100%;
       height: auto;
       max-height: 400px;
       object-fit: cover;
-      margin-top: 1rem;
+      margin-top: var(--spacing-unit);
+      border-radius: 4px;
     }
 
     main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
+      max-width: var(--max-width);
+      margin: calc(var(--spacing-unit) * 2) auto;
+      padding: 0 var(--spacing-unit);
     }
 
     h1, h2 {
       color: var(--azul-escuro);
+      line-height: 1.3;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      margin-bottom: calc(var(--spacing-unit) * 1.5);
+      position: relative;
+    }
+
+    h1::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background-color: var(--azul-lifetoja);
+      margin-top: calc(var(--spacing-unit) * 0.5);
     }
 
     h2 {
-      margin-top: 2rem;
+      margin-top: calc(var(--spacing-unit) * 2);
       border-left: 4px solid var(--azul-lifetoja);
-      padding-left: 0.5rem;
+      padding-left: calc(var(--spacing-unit) * 0.5);
+      font-size: clamp(1.4rem, 3vw, 1.8rem);
     }
 
     p {
-      margin-bottom: 1.2rem;
+      margin-bottom: calc(var(--spacing-unit) * 1.2);
       text-align: justify;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    strong {
+      color: var(--azul-escuro);
+    }
+
+    em {
+      color: var(--azul-lifetoja);
+      font-style: italic;
+      font-size: 1.2rem;
     }
 
     footer {
       text-align: center;
       font-size: 0.9rem;
-      color: #777;
-      padding: 2rem 1rem;
+      color: #666;
+      padding: calc(var(--spacing-unit) * 2) var(--spacing-unit);
       border-top: 2px solid var(--azul-escuro);
       background-color: #ffffff;
+      box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    @media (max-width: 768px) {
+      main {
+        padding: 0 calc(var(--spacing-unit) * 1.5);
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      main {
+        max-width: 100%;
+      }
+
+      .banner {
+        display: none;
+      }
     }
   </style>
 </head>
 <body>
-
   <header>
     <img src="logo.jpg" alt="Logo Lifetoja" class="logo">
-    <img src="banner.jpg" alt="Banner Lifetoja" class="banner">
+    <img src="banner.jpg" alt="Banner Lifetoja - Representação visual de nossa missão" class="banner">
   </header>
 
   <main>
@@ -106,13 +188,12 @@
       Esse processo é, por natureza, gradual. Avança de geração em geração, com persistência e profundidade, promovendo um autoaperfeiçoamento contínuo. A Lifetoja é apenas uma das inúmeras manifestações dessa força discreta, mas inabalável, que acompanha a história da civilização e continuará presente em seu futuro.
     </p>
 
-    <h2>Slogan</h2>
-    <p><em>Life, a treasured old jade.</em></p>
+    <h2>Nossa Essência</h2>
+    <p><em>"Life, a treasured old jade."</em></p>
   </main>
 
   <footer>
-    &copy; 2025 Lifetoja. Todos os direitos reservados.
+    <p>&copy; 2025 Lifetoja. Todos os direitos reservados.</p>
   </footer>
-
 </body>
 </html>
